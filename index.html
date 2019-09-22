@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rainy day</title>
+	<style type="text/css">
+		#f{position: absolute; opacity: 0; width: 100px; z-index: 9999999;}
+		#r{opacity: 0; width: 100px; position: absolute; z-index: 9999;}
+		
+		#c{position: absolute; margin-top: 50px; margin-left: 50px; background-size: cover; width: 700px; overflow: hidden; animation: shake 1s infinite alternate linear  ;}
+		@keyframes shake{
+			
+			to{transform: rotate3d(1,0,1,5deg);}
+		}
+
+		#m{position: absolute; opacity: 0; margin-left: 800px; margin-top: 50px;}
+		
+		#k{position: absolute; margin-left: 530px; margin-top: 300px; animation: ro 0.5s infinite alternate linear;}
+		
+		#a{position: absolute; width: 100px; opacity: 0; z-index: 99999;}
+		#rain{opacity: 0; background: url(rainy.gif); background-size: cover; position: absolute; margin: 0px;}
+		
+		
+		@keyframes ro {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+		
+		
+	</style>
+</head>
+<body id="mybody" style="background-color: black;">
+	<img src="3-1.png" id="before" style="position: absolute; ">
+	<img src="4.png" id="c">
+	<div id="rain"></div>
+	<img src="rain1.gif" id="f">
+	<img src="click.png" id="k">
+	<img src="muno.gif" id="m">
+	<img src="rainyday.gif" id="r">
+	<img src="frame.png" id="a">
+	<audio id="mysound" loop>
+ 	<source src="sound.mp3" type="audio/mpeg">
+	</audio>
+
+	<script type="text/javascript">
+			c.onclick = function () {
+			before.src = "2.gif";
+			mysound.play();
+			c.style.opacity = "0";
+			k.style.opacity = "0";
+			m.style.opacity = "1";
+			r.style.opacity = "0.35";
+			r.style.width = "1600px";
+			r.style.height = "900px";
+			a.style.width = "1600px";
+			a.style.height = "900px";
+			a.style.opacity = "1";
+			f.style.width = "1800px";
+			f.style.opacity = "1";
+		}
+
+
+	</script>
+	<footer style="color: #595A73; position: absolute; margin-top: 900px;">
+		Copyright 2019. So Yoon Jeong All rights reserved.
+	</footer>
+</body>
+
+</html>
